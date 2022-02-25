@@ -24,13 +24,9 @@
         .side-bar-list-item {
           display: flex;
           align-items: center;
-          padding: 5px;
-          cursor: pointer;
-          border-radius: 10px;
 
-          &.active,
-          &:hover {
-            background-color: rgb(228, 228, 250);
+          & + .side-bar-list-item {
+            margin-top: 5px;
           }
 
           .side-bar-icon {

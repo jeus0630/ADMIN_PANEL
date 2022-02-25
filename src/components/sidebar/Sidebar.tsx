@@ -14,16 +14,22 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
                     <h3 className="side-bar-title">Dashboard</h3>
                     <ul className="side-bar-list">
                         <li className="side-bar-list-item">
-                            <LineStyle className="side-bar-icon"></LineStyle>
-                            Home
+                            <NavLink to="/" className={"link"}>
+                                <LineStyle className="side-bar-icon"></LineStyle>
+                                Home
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <Timeline className="side-bar-icon"></Timeline>
-                            Analytics
+                            <NavLink to="/analytics" className={"link"}>
+                                <Timeline className="side-bar-icon"></Timeline>
+                                Analytics
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <TrendingUp className="side-bar-icon"></TrendingUp>
-                            Sales
+                            <NavLink to="/sales" className={"link"}>
+                                <TrendingUp className="side-bar-icon"></TrendingUp>
+                                Sales
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -43,12 +49,16 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
                             </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <AttachMoney className="side-bar-icon"></AttachMoney>
-                            Transactions
+                            <NavLink to="/transactions" className={"link"}>
+                                <AttachMoney className="side-bar-icon"></AttachMoney>
+                                Transactions
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <BarChart className="side-bar-icon"></BarChart>
-                            Reports
+                            <NavLink to="/reports" className={"link"}>
+                                <BarChart className="side-bar-icon"></BarChart>
+                                Reports
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -56,16 +66,22 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
                     <h3 className="side-bar-title">Notifications</h3>
                     <ul className="side-bar-list">
                         <li className="side-bar-list-item">
-                            <MailOutline className="side-bar-icon"></MailOutline>
-                            Mail
+                            <NavLink to="/mail" className={"link"}>
+                                <MailOutline className="side-bar-icon"></MailOutline>
+                                Mail
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <DynamicFeed className="side-bar-icon"></DynamicFeed>
-                            Feedback
+                            <NavLink to="/feedback" className={"link"}>
+                                <DynamicFeed className="side-bar-icon"></DynamicFeed>
+                                Feedback
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <ChatBubbleOutline className="side-bar-icon"></ChatBubbleOutline>
-                            Messages
+                            <NavLink to="/messages" className={"link"}>
+                                <ChatBubbleOutline className="side-bar-icon"></ChatBubbleOutline>
+                                Messages
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -73,16 +89,22 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
                     <h3 className="side-bar-title">Staff</h3>
                     <ul className="side-bar-list">
                         <li className="side-bar-list-item">
-                            <WorkOutline className="side-bar-icon"></WorkOutline>
-                            Manage
+                            <NavLink to="/manage" className={"link"}>
+                                <WorkOutline className="side-bar-icon"></WorkOutline>
+                                Manage
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <Timeline className="side-bar-icon"></Timeline>
-                            Analytics
+                            <NavLink to="/analytics" className={"link"}>
+                                <Timeline className="side-bar-icon"></Timeline>
+                                Analytics
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <Report className="side-bar-icon"></Report>
-                            Reports
+                            <NavLink to="/reports" className={"link"}>
+                                <Report className="side-bar-icon"></Report>
+                                Reports
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
