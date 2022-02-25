@@ -1,6 +1,7 @@
 import * as React from 'react';
 import "./sidebar.scss";
-import { LineStyle, Timeline, TrendingUp,PermIdentity,Storefront,AttachMoney,BarChart,MailOutline,DynamicFeed,ChatBubbleOutline ,WorkOutline,Report} from '@mui/icons-material';
+import { LineStyle, Timeline, TrendingUp, PermIdentity, Storefront, AttachMoney, BarChart, MailOutline, DynamicFeed, ChatBubbleOutline, WorkOutline, Report } from '@mui/icons-material';
+import { NavLink } from 'react-router-dom';
 
 interface ISidebarProps {
 }
@@ -30,12 +31,16 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
                     <h3 className="side-bar-title">Quick Menu</h3>
                     <ul className="side-bar-list">
                         <li className="side-bar-list-item">
-                            <PermIdentity className="side-bar-icon"></PermIdentity>
-                            Users
+                            <NavLink to="/users" className={"link"}>
+                                <PermIdentity className="side-bar-icon"></PermIdentity>
+                                Users
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
-                            <Storefront className="side-bar-icon"></Storefront>
-                            Products
+                            <NavLink to="/products" className={"link"}>
+                                <Storefront className="side-bar-icon"></Storefront>
+                                Products
+                            </NavLink>
                         </li>
                         <li className="side-bar-list-item">
                             <AttachMoney className="side-bar-icon"></AttachMoney>

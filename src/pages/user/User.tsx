@@ -14,7 +14,7 @@ const User: React.FunctionComponent<IUserProps> = (props) => {
         <div className='user'>
             <div className="user-title-container">
                 <h1 className='user-title'>Edit User</h1>
-                <button className="user-add-button" onClick={() => navigate("/newuser")}>Create</button>
+                <button className="user-add-button" onClick={() => navigate("/new-user")}>Create</button>
             </div>
             <div className="user-container">
                 <div className="user-show">
