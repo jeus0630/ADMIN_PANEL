@@ -3,9 +3,15 @@ import "./chart.scss";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 interface IChartProps {
+  propData?: {
+    name: string;
+    Sales: number;
+  }[],
+  dataKey?: string;
+  title?: string;
 }
 
-const Chart: React.FunctionComponent<IChartProps> = (props) => {
+const Chart: React.FunctionComponent<IChartProps> = ({ propData, dataKey, title }) => {
 
   const data = [
     {
@@ -60,17 +66,17 @@ const Chart: React.FunctionComponent<IChartProps> = (props) => {
 
   return (
     <div className="chart">
-      <h3 className="chart-title">User Analytics</h3>
+      <h3 className="chart-title">{title || "User Analytics"}</h3>
       <ResponsiveContainer width="100%" aspect={4 / 1}>
         <LineChart
-          data={data}
+          data={propData || data}
         >
           <XAxis dataKey="name" stroke="#5550bd" />
-          <Line type="monotone" activeDot={{ r: 8 }} dataKey="Active User" stroke="#5550bd" />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line type="monotone" activeDot={{ r: 8 }} dataKey={dataKey || "Active User"} stroke="#5550bd" />
+          <Line type="monotone" stroke="#82ca9d" />
           <Tooltip>
           </Tooltip>
-          <CartesianGrid stroke={"#e0dfdf"} strokeDasharray="5 5"></CartesianGrid>
+          {/* <CartesianGrid stroke={"#e0dfdf"} strokeDasharray="5 5"></CartesianGrid> */}
         </LineChart>
       </ResponsiveContainer>
     </div>
