@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './components/sidebar/Sidebar';
 import Topbar from './components/topbar/Topbar';
 import "./app.scss";
+import Home from './pages/Home/Home';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Topbar></Topbar>
       <div className="container">
         <Sidebar></Sidebar>
-        <div className="others">other pages</div>
+        <Home></Home>
       </div>
     </div>
   );
