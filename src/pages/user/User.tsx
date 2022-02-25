@@ -1,6 +1,6 @@
 import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from '@mui/icons-material';
 import * as React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import "./user.scss";
 
 interface IUserProps {
@@ -8,12 +8,13 @@ interface IUserProps {
 
 const User: React.FunctionComponent<IUserProps> = (props) => {
     const { id } = useParams();
+    const navigate = useNavigate();
 
     return (
         <div className='user'>
             <div className="user-title-container">
                 <h1 className='user-title'>Edit User</h1>
-                <button className="user-add-button">Create</button>
+                <button className="user-add-button" onClick={() => navigate("/newuser")}>Create</button>
             </div>
             <div className="user-container">
                 <div className="user-show">
